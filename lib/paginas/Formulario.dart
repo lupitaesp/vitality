@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vitality/login/inicio.dart';
+import 'package:vitality/paginas/inicio.dart';
 
 class RegisterPage extends StatefulWidget {
   @override

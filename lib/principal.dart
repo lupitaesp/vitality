@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
-import 'package:vitality/login.dart';
+import 'paginas/Formulario.dart';
+import 'package:vitality/login/login.dart';
 
 
 class Principal extends StatefulWidget{
@@ -68,14 +69,18 @@ class _Principal extends State<Principal>{
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     onPrimary: Colors.black,
-                    minimumSize: const Size(double.infinity,50),
+                    minimumSize: const Size(double.infinity,80),
                   ),
-                  icon: const FaIcon(FontAwesomeIcons.google, color: Colors.red),
-                  label: const Text('Sing Up with Google'),
+                  icon: const FaIcon(FontAwesomeIcons.google, color: Colors.yellow),
+                  label: const Text('Registrarse'),
                   onPressed: () {
-                    final provider =
-                        Provider.of<GoogleSingInProvider>(context, listen: false);
-                    provider.googleLogin();
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => RegisterPage()),
+                        );
+                    //final provider =
+                       // Provider.of<GoogleSingInProvider>(context, listen: false);
+                   // provider.googleLogin();
                   } ),
             ],
           ),

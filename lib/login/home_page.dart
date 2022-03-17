@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'logged_in.dart';
-import 'package:vitality/singup.dart';
+import 'package:vitality/login/singup.dart';
 
 class HomePage extends StatelessWidget{
   @override

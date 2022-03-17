@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vitality/login/perfil.dart';
+import 'package:vitality/paginas/perfil.dart';
+import 'package:vitality/paginas/webC.dart';
+import 'package:vitality/paginas/webC2.dart';
 import 'package:vitality/principal.dart';
 
 void main() => runApp(MyApp2());
@@ -47,7 +49,6 @@ class Cliente extends StatelessWidget {
           _buildHeading("Consejos Generales"),
           _buildListItem1(context),
           _buildListItem2(context),
-          _buildListItem3(context),
           //_buildListItem(Colors.transparent),
         ],
       ),
@@ -139,48 +140,6 @@ class Cliente extends StatelessWidget {
     );
   }
 
-  Widget _buildListItem3(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => WebC3()));
-      },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
-        child: Row(
-          children: <Widget>[
-            Container(
-              height: 150,
-              width: 150,
-              margin: const EdgeInsets.only(right: 10.0),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                    image: NetworkImage(
-                        'https://th.bing.com/th/id/OIP.2R9khSWJsPP81a2XJZdjZAHaE8?pid=Api&rs=1')),
-                color: Colors.transparent,
-              ),
-            ),
-            Expanded(
-              child: Column(
-                children: <Widget>[
-                  Text(
-                    "Estudio revela que algunos sobrevivientes de Covid-19 sufren desórdenes psiquiátricos",
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(height: 10.0),
-                  Text(
-                      "Un estudio del hospital San Raffaele en Milán publicado el lunes en la revista científica Brain, Behavior and Immunity, mostró que más de la mitad de los 402 pacientes controlados un mes después de ser tratados por el virus experimentaron al menos uno de estos trastornos en proporción a la gravedad de la inflamación durante la enfermedad.",
-                      textAlign: TextAlign.justify),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
 
   Padding _buildHeading(String title) {
     return Padding(
